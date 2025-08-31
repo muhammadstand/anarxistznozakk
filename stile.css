@@ -1,0 +1,164 @@
+/* Общий стиль */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #e7e8ea;
+}
+
+/* Шапка */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0d0d0d;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #1e90ff;
+}
+
+.header a {
+  color: #66ccff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header a:hover {
+  color: #fff;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #66ccff;
+}
+
+.logo span {
+  font-size: 12px;
+  margin-left: 5px;
+  color: #1e90ff;
+}
+
+/* Hero блок */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #000 40%, #001f33 100%);
+}
+
+.hero h1 {
+  font-size: 52px;
+  color: #66ccff;
+}
+
+.hero span {
+  color: #1e90ff;
+}
+
+.hero p {
+  color: #a4a7ae;
+  font-size: 18px;
+}
+
+/* Основные секции */
+.block {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #0d0d0d;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 15px rgba(0, 153, 255, 0.2);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.block.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block h2 {
+  color: #66ccff;
+  border-left: 4px solid #1e90ff;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.block p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Галерея портфеля */
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.portfolio-item {
+  background: #0d0d0d;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.3);
+  text-align: center;
+  width: 100px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 100px;
+}
+
+.portfolio-item p {
+  padding: 10px;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 153, 255, 0.6);
+}
+
+/* Контакты */
+#contact a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 18px;
+  background: #1e90ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  animation: pulse 2s infinite;
+}
+
+#contact a:hover {
+  background: #66ccff;
+  color: #000;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Подвал */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d0d0d;
+  color: #aaa;
+  border-top: 2px solid #1e90ff;
+}
